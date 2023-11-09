@@ -1,4 +1,12 @@
+<h1 style="font-size:3.3em;color:skyblue;text-align:center">ocr学习笔记</h1>
+
 [toc]
+
+---
+
+
+
+
 
 
 
@@ -3508,7 +3516,436 @@ public class SpringBootTess4JOcrApplication
 
 # 百度OCR
 
-https://ai.baidu.com/ai-doc/OCR/rk3h7xzck
+## 概述
+
+多场景、多语种、高精度的文字检测与识别服务，多项ICDAR指标居世界第一；广泛适用于远程身份认证、财税报销、文档电子化等场景，为企业降本增效；提供稳定易用的在线API、离线SDK、软件部署包、一体机多种服务形式
+
+
+
+特色优势：
+
+* **算法精度高**：依托百度领先的深度学习算法和海量数据沉淀，通用文字识别及主流卡证票据识别准确率高达98%以上
+* **产品矩阵丰富**：70+项细分识别能力，业内首发2个可定制的自定义平台，全面覆盖不同行业/场景的文字识别需求
+* **服务稳定可靠**：公有云服务可用性高达99.9%，弹性可伸缩、支持高并发承载，使用便捷，稳定可靠
+
+
+
+
+
+## 文档地址
+
+https://ai.baidu.com/ai-doc/OCR/
+
+
+
+
+
+
+
+## 使用
+
+### 第一步：成为百度AI开放平台的开发者
+
+使用百度AI开放平台的文字识别能力，先要成为百度AI开放平台的开发者，首先让我们花5分钟来注册百度AI开放平台的账号。
+
+先点击[注册百度账户](https://passport.baidu.com/v2/?reg)，进入如下图的页面**快速地建立一个百度账号**。 ![图片](img/ocr学习笔记/1e2c748921100eade38d5a273_1e2c748.jpg)
+
+
+
+
+
+### 第二步：开通文字识别服务
+
+
+
+#### **1. 领取免费测试资源**
+
+登录进入 [文字识别控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)，在【概览】页找到**「领取免费资源」**按钮。
+
+![infoflow_2022-11-12_19-51-20.png](img/ocr学习笔记/infoflow_2022-11-12_19-51-20_3e0c005.png)
+
+根据您的需求选择相应的文字识别接口，选择完成后点击**「0元领取」**，领取免费测试资源。
+
+![图片5.png](img/ocr学习笔记/图片5_6babcb4.png)
+
+领取成功的免费测试资源将会显示在[资源列表](https://console.bce.baidu.com/ai/?_=1625726102409#/ai/ocr/overview/resource/list)的「已领取资源」中。您可以选择「查看领取记录」去往「资源列表」查看。**刚领取的资源大约10分钟生效，若领取接口长时间未在「资源列表」上生效显示，可[提交工单](https://ticket.bce.baidu.com/?_=1625726102409#/ticket/create~productId=96)咨询。**
+
+![图片8.png](img/ocr学习笔记/图片8_92b62f6.png)
+
+免费测试资源使用完毕可选择按照**预付费**和**后付费**方式进行计费，两种计费方式均可在 [文字识别控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index) 直接开通或购买，详情可参考[计费概述](https://ai.baidu.com/ai-doc/OCR/Jk3h7xtsd)
+
+#### **2. 创建应用**
+
+领取完免费测试资源后，您需要创建应用才可正式调用文字识别能力。
+
+进入 [文字识别控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)，**点击 「去创建」**，即可进入应用创建页面。
+
+![infoflow_2022-11-12_22-18-16.png](img/ocr学习笔记/infoflow_2022-11-12_22-18-16_aadaf66.png)
+
+根据您的需要，填写完毕相应信息后，点击「立即创建」，即可完成应用的创建。应用创建完毕后，您可以点击左侧导航中的**「应用列表」**，进行查看和管理。
+
+![infoflow_2022-11-12_22-21-18.png](img/ocr学习笔记/infoflow_2022-11-12_22-21-18_2a8cb9e.png)
+
+然后就能看到创建完的应用 ***API KEY\*** 以及 ***Secret KEY\*** 了。以上两个信息是您应用实际开发的主要凭证，每个应用之间各不相同，请您妥善保管。
+
+![infoflow_2022-11-12_22-22-44.png](img/ocr学习笔记/infoflow_2022-11-12_22-22-44_52e14c1.png)
+
+### 第三步：使用文字识别服务
+
+您可以根据以下介绍选择合适的使用方式：
+
+- **通过 [百度智能云 - 示例代码中心](https://console.bce.baidu.com/tools/#/api?product=AI&project=文字识别&parent=鉴权认证机制&api=oauth/2.0/token) 在线调用文字识别服务 API**
+- **通过编写代码调用文字识别服务 API**
+- **通过软件开发工具包（HTTP-SDK）调用文字识别服务**
+
+
+
+
+
+
+
+
+
+
+
+## 免费测试资源
+
+登录 [文字识别控制台](https://console.bce.baidu.com/ai/?_=1634647029968&fromai=1#/ai/ocr/overview/index)，**找到「领取免费资源」按钮。** ![图片4.png](img/ocr学习笔记/图片4_d439db4.png)
+
+根据您的需求选择相应的文字识别接口，选择完成后**点击「0元领取」**，领取免费测试资源。 ![图片5.jpg](img/ocr学习笔记/图片5_c3ab7a3.jpg)
+
+领取成功的免费测试资源将会显示在[资源列表](https://console.bce.baidu.com/ai/?_=1625726102409#/ai/ocr/overview/resource/list)的「已领取资源」中。您可以选择「查看领取记录」去往「资源列表」查看。**刚领取的资源大约10分钟生效，若领取接口长时间未在「资源列表」上生效显示，可[提交工单](https://ticket.bce.baidu.com/?_=1625726102409#/ticket/create~productId=96)咨询。** ![图片6.jpg](img/ocr学习笔记/图片6_cfa30bb.jpg)
+
+
+
+
+
+
+
+
+
+## 调用方式
+
+Content-Type为`application/x-www-form-urlencoded`，然后通过`urlencode`格式化请求体。
+
+JSON格式
+
+请求图片需经过`base64编码`及`urlencode`后传入：图片的base64编码指将一副图片数据编码成一串字符串，使用该字符串代替图像地址。您可以首先得到图片的二进制，然后去掉编码头后再进行urlencode
+
+base64编码urlencode后大小不超过4M，最短边至少15px，最长边最大4096px
+
+
+
+向API服务地址使用POST发送请求，必须在URL中带上参数：
+
+**access_token：** 必须参数，参考“[Access Token获取](https://ai.baidu.com/ai-doc/REFERENCE/Ck3dwjhhu)”。`access_token`的有效期为30天，需要每30天进行定期更换
+
+
+
+**获取access_token示例代码**：
+
+```java
+
+package com.baidu.ai.aip.auth;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 获取token类
+ */
+public class AuthService {
+
+    /**
+     * 获取权限token
+     * @return 返回示例：
+     * {
+     * "access_token": "24.460da4889caad24cccdb1fea17221975.2592000.1491995545.282335-1234567",
+     * "expires_in": 2592000
+     * }
+     */
+    public static String getAuth() {
+        // 官网获取的 API Key 更新为你注册的
+        String clientId = "百度云应用的AK";
+        // 官网获取的 Secret Key 更新为你注册的
+        String clientSecret = "百度云应用的SK";
+        return getAuth(clientId, clientSecret);
+    }
+
+    /**
+     * 获取API访问token
+     * 该token有一定的有效期，需要自行管理，当失效时需重新获取.
+     * @param ak - 百度云官网获取的 API Key
+     * @param sk - 百度云官网获取的 Securet Key
+     * @return assess_token 示例：
+     * "24.460da4889caad24cccdb1fea17221975.2592000.1491995545.282335-1234567"
+     */
+    public static String getAuth(String ak, String sk) {
+        // 获取token地址
+        String authHost = "https://aip.baidubce.com/oauth/2.0/token?";
+        String getAccessTokenUrl = authHost
+                // 1. grant_type为固定参数
+                + "grant_type=client_credentials"
+                // 2. 官网获取的 API Key
+                + "&client_id=" + ak
+                // 3. 官网获取的 Secret Key
+                + "&client_secret=" + sk;
+        try {
+            URL realUrl = new URL(getAccessTokenUrl);
+            // 打开和URL之间的连接
+            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
+            // 获取所有响应头字段
+            Map<String, List<String>> map = connection.getHeaderFields();
+            // 遍历所有的响应头字段
+            for (String key : map.keySet()) {
+                System.err.println(key + "--->" + map.get(key));
+            }
+            // 定义 BufferedReader输入流来读取URL的响应
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String result = "";
+            String line;
+            while ((line = in.readLine()) != null) {
+                result += line;
+            }
+            /**
+             * 返回结果示例
+             */
+            System.err.println("result:" + result);
+            JSONObject jsonObject = new JSONObject(result);
+            String access_token = jsonObject.getString("access_token");
+            return access_token;
+        } catch (Exception e) {
+            System.err.printf("获取token失败！");
+            e.printStackTrace(System.err);
+        }
+        return null;
+    }
+
+}
+```
+
+
+
+
+
+
+
+## 通用文字识别（标准版）
+
+HTTP 方法：`POST`
+
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic`
+
+URL参数：
+
+| 参数         | 值                                        |
+| ------------ | ----------------------------------------- |
+| access_token | 通过API Key和Secret Key获取的access_token |
+
+Header如下：
+
+| 参数         | 值                                |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
+
+
+
+Body中放置请求参数，参数详情如下：
+
+|       参数       |             是否必选              |  类型  |                 可选值范围                  |                             说明                             |
+| :--------------: | :-------------------------------: | :----: | :-----------------------------------------: | :----------------------------------------------------------: |
+|      image       |  和 url/pdf_file/ofd_file 四选一  | string |                      -                      | 图像数据，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px，支持jpg/jpeg/png/bmp格式 **优先级**：image > url > pdf_file > ofd_file ，当image字段存在时，url、pdf_file、ofd_file 字段失效 |
+|       url        | 和 image/pdf_file/ofd_file 四选一 | string |                      -                      | 图片完整url，url长度不超过1024字节，url对应的图片base64编码后大小不超过8M，最短边至少15px，最长边最大4096px，支持jpg/jpeg/png/bmp格式 **优先级**：image > url > pdf_file > ofd_file，当image字段存在时，url字段失效 **请注意关闭URL防盗链** |
+|     pdf_file     |   和 image/url/ofd_file 四选一    | string |                      -                      | PDF文件，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px **优先级**：image > url > pdf_file > ofd_file，当image、url字段存在时，pdf_file字段失效 |
+|   pdf_file_num   |                否                 | string |                      -                      | 需要识别的PDF文件的对应页码，当 pdf_file 参数有效时，识别传入页码的对应页面内容，若不传入，则默认识别第 1 页 |
+|     ofd_file     |   和 image/url/pdf_file 四选一    | string |                      -                      | OFD文件，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px **优先级**：image > url > pdf_file > ofd_file，当image、url、pdf_file字段存在时，ofd_file字段失效 |
+|   ofd_file_num   |                否                 | string |                      -                      | 需要识别的OFD文件的对应页码，当 ofd_file 参数有效时，识别传入页码的对应页面内容，若不传入，则默认识别第 1 页 |
+|  language_type   |                否                 | string | CHN_ENG ENG JAP KOR FRE SPA POR GER ITA RUS | 识别语言类型，默认为CHN_ENG 可选值包括： - CHN_ENG：中英文混合 - ENG：英文 - JAP：日语 - KOR：韩语 - FRE：法语 - SPA：西班牙语 - POR：葡萄牙语 - GER：德语 - ITA：意大利语 - RUS：俄语 |
+| detect_direction |                否                 | string |                 true/false                  | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括: - true：检测朝向； - false：不检测朝向。 |
+| detect_language  |                否                 | string |                 true/false                  | 是否检测语言，默认不检测，即：false。当前支持中文、英语、日语、韩语 |
+|    paragraph     |                否                 | string |                 true/false                  |                       是否输出段落信息                       |
+|   probability    |                否                 | string |                 true/false                  |               是否返回识别结果中每一行的置信度               |
+
+
+
+
+
+示例：
+
+```java
+
+package com.baidu.ai.aip;
+
+import com.baidu.ai.aip.utils.Base64Util;
+import com.baidu.ai.aip.utils.FileUtil;
+import com.baidu.ai.aip.utils.HttpUtil;
+
+import java.net.URLEncoder;
+
+/**
+* 通用文字识别
+*/
+public class GeneralBasic {
+
+    /**
+    * 重要提示代码中所需工具类
+    * FileUtil,Base64Util,HttpUtil,GsonUtils请从
+    * https://ai.baidu.com/file/658A35ABAB2D404FBF903F64D47C1F72
+    * https://ai.baidu.com/file/C8D81F3301E24D2892968F09AE1AD6E2
+    * https://ai.baidu.com/file/544D677F5D4E4F17B4122FBD60DB82B3
+    * https://ai.baidu.com/file/470B3ACCA3FE43788B5A963BF0B625F3
+    * 下载
+    */
+    public static String generalBasic() {
+        // 请求url
+        String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic";
+        try {
+            // 本地文件路径
+            String filePath = "[本地文件路径]";
+            byte[] imgData = FileUtil.readFileByBytes(filePath);
+            String imgStr = Base64Util.encode(imgData);
+            String imgParam = URLEncoder.encode(imgStr, "UTF-8");
+
+            String param = "image=" + imgParam;
+
+            // 注意这里仅为了简化编码每一次请求都去获取access_token，线上环境access_token有过期时间， 客户端可自行缓存，过期后重新获取。
+            String accessToken = "[调用鉴权接口获取的token]";
+
+            String result = HttpUtil.post(url, accessToken, param);
+            System.out.println(result);
+            return result;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        GeneralBasic.generalBasic();
+    }
+}
+```
+
+
+
+
+
+
+
+响应：
+
+|         字段          | 是否必选 | 类型    |                             说明                             |
+| :-------------------: | :------: | ------- | :----------------------------------------------------------: |
+|       direction       |    否    | int32   | 图像方向，当 detect_direction=true 时返回该字段。 - - 1：未定义， - 0：正向， - 1：逆时针90度， - 2：逆时针180度， - 3：逆时针270度 |
+|        log_id         |    是    | uint64  |                  唯一的log id，用于问题定位                  |
+|   words_result_num    |    是    | uint32  |            识别结果数，表示words_result的元素个数            |
+|     words_result      |    是    | array[] |                         识别结果数组                         |
+|        + words        |    否    | string  |                        识别结果字符串                        |
+|     + probability     |    否    | object  | 识别结果中每一行的置信度值，包含average：行置信度平均值，variance：行置信度方差，min：行置信度最小值，当 probability=true 时返回该字段 |
+|   paragraphs_result   |    否    | array[] |         段落检测结果，当 paragraph=true 时返回该字段         |
+|  + words_result_idx   |    否    | array[] |     一个段落包含的行序号，当 paragraph=true 时返回该字段     |
+| paragraphs_result_num |    否    | uint32  | 识别结果数，表示 paragraphs_result的元素个数，当 paragraph=true 时返回该字段 |
+|       language        |    否    | int32   | 语种类型，当 detect_language=true 时返回该字段。 - - 1：未定义， - 0：英文， - 1：日文， - 2：韩文， - 3：中文 |
+|     pdf_file_size     |    否    | string  |    传入PDF文件的总页数，当 pdf_file 参数有效时返回该字段     |
+|     ofd_file_size     |    否    | string  |    传入OFD文件的总页数，当 ofd_file 参数有效时返回该字段     |
+
+
+
+
+
+
+
+
+
+
+
+## 路桥费识别
+
+支持对全国范围不同版式过路、过桥费发票的发票代码、发票号码、入口、出口、日期、时间、金额、省、市9个字段进行结构化识别
+
+
+
+HTTP 方法: `POST`
+
+请求URL: `https://aip.baidubce.com/rest/2.0/ocr/v1/toll_invoice`
+
+URL参数：
+
+| 参数         | 值                                         |
+| ------------ | ------------------------------------------ |
+| access_token | 通过API Key和Secret Key获取的access_token, |
+
+
+
+Header如下：
+
+| 参数         | 值                                |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
+
+
+
+**请求参数**
+
+|     参数     |             是否必须              |  类型  | 可选值范围 |                             说明                             |
+| :----------: | :-------------------------------: | :----: | ---------- | :----------------------------------------------------------: |
+|    image     |  和 url/pdf_file/ofd_file 四选一  | string | -          | 图像数据，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px，支持jpg/jpeg/png/bmp格式 **优先级**：image > url > pdf_file > ofd_file ，当image字段存在时，url、pdf_file、ofd_file 字段失效 |
+|     url      | 和 image/pdf_file/ofd_file 四选一 | string | -          | 图片完整url，url长度不超过1024字节，url对应的图片base64编码后大小不超过8M，最短边至少15px，最长边最大4096px，支持jpg/jpeg/png/bmp格式 **优先级**：image > url > pdf_file > ofd_file，当image字段存在时，url字段失效 **请注意关闭URL防盗链** |
+|   pdf_file   |   和 image/url/ofd_file 四选一    | string | -          | PDF文件，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px **优先级**：image > url > pdf_file > ofd_file，当image、url字段存在时，pdf_file字段失效 |
+| pdf_file_num |                否                 | string | -          | 需要识别的PDF文件的对应页码，当 pdf_file 参数有效时，识别传入页码的对应页面内容，若不传入，则默认识别第 1 页 |
+|   ofd_file   |   和 image/url/pdf_file 四选一    | string | -          | OFD文件，base64编码后进行urlencode，要求base64编码和urlencode后大小不超过8M，最短边至少15px，最长边最大4096px **优先级**：image > url > pdf_file > ofd_file，当image、url、pdf_file字段存在时，ofd_file字段失效 |
+| ofd_file_num |                否                 | string | -          | 需要识别的OFD文件的对应页码，当 ofd_file 参数有效时，识别传入页码的对应页面内容，若不传入，则默认识别第 1 页 |
+
+
+
+
+
+**响应**
+
+|       参数       | 是否必须 |  类型  |                  说明                  |
+| :--------------: | :------: | :----: | :------------------------------------: |
+|      log_id      |    是    | uint64 |       唯一的log id，用于问题定位       |
+| words_result_num |    是    | uint32 | 识别结果数，表示words_result的元素个数 |
+|   words_result   |    是    | object |                识别结果                |
+|  + InvoiceCode   |    是    | string |                发票代码                |
+|   + InvoiceNum   |    是    | string |                发票号码                |
+|    + Entrance    |    是    | string |                  入口                  |
+|      + Exit      |    是    | string |                  出口                  |
+|      + Date      |    是    | string |                  日期                  |
+|      + Time      |    是    | string |                  时间                  |
+|      + Fare      |    是    | string |                  金额                  |
+|    + Province    |    是    | string |                   省                   |
+|      + City      |    是    | string |                   市                   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+end
+
+2023  11 09
+
+---
 
 
 
